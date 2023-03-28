@@ -1,0 +1,36 @@
+// importing required libraries
+import java.util.Arrays;
+
+//Main class
+public class Main{
+    
+    //main method
+    public static void main(String[] args){
+        
+        // array initialization
+        int[] arr = {12,4,78,654,34,23,78};
+        
+        // printing array to check references
+        System.out.println(Arrays.toString(arr));
+        
+        // traversing array indecws
+        for(int i=0; i<arr.length; i++){
+            
+            // value comprison
+            for(int j=0; j<arr.length-1-i; j++){
+                
+                // condition statement
+                if(arr[j]>arr[j+1]){
+                    
+                    // swap
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1]=temp;
+                }
+            }
+        }
+        
+        // printing array to check algorithm
+        System.out.println(Arrays.toString(arr));
+    }
+}
